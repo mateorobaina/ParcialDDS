@@ -3,7 +3,7 @@ import java.util.List;
 public class Stock {
 
     public static List<Libro> librosStock;
-    public static Libro principito = new Libro(true, false, true, "Principito", 1231, 12);
+    public static Libro principito = new Libro();
 
     public List<Libro> getLibrosStock() {
         return librosStock;
