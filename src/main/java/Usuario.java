@@ -1,11 +1,19 @@
-
+import java.util.List;
 
 public class Usuario {
     private String nombreUsuario;
     private String email;
     private String telefono;
     private String nombreCompleto;
+    private List<Notificacion> formasNotificacion;
 
+    public void enviarNotificaciones(String mensaje) {
+        EnviadorNotificaciones enviadorNotificaciones = EnviadorNotificaciones.getInstancia();
+        enviadorNotificaciones.enviarNotificaciones(this.formasNotificacion, mensaje, this);
+    }
+    public void setNotificacion(List<Notificacion> formasNotificacion) {
+        this.formasNotificacion = formasNotificacion;
+    }
     public String getNombreUsuario() {
         return nombreUsuario;
     }
