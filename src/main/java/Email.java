@@ -15,7 +15,7 @@ public class Email extends Notificacion {
             com.sendgrid.helpers.mail.objects.Email from = new com.sendgrid.helpers.mail.objects.Email("jrobaina@frba.utn.edu.ar");
             com.sendgrid.helpers.mail.objects.Email to = new com.sendgrid.helpers.mail.objects.Email(usuario.getEmail());
 
-            String subject = "Probando";
+            String subject = "Tu libro ha sido encontrado" + " " + usuario.getNombre() + " " + usuario.getApellido();
             Content content = new Content("text/html", mensaje);
 
             Mail mail = new Mail(from, subject, to, content);

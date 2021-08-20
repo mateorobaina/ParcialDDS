@@ -2,8 +2,8 @@ import java.util.List;
 
 public class Stock {
 
-    public static List<Libro> librosStock;
-    public static Libro principito = new Libro();
+    private List<Libro> librosStock;
+
 
     public List<Libro> getLibrosStock() {
         return librosStock;
@@ -13,7 +13,7 @@ public class Stock {
         this.librosStock = librosStock;
     }
 
-    public static void agregarLibro(){
-        librosStock.add(principito);
+    public void agregarLibro(Libro libro){
+        librosStock.add(libro);
     }
 }

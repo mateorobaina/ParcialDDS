@@ -16,8 +16,9 @@ public class Aplicacion {
 
         // Contacto de Lautaro
         Usuario contactoMateo = new Usuario();
-        contactoMateo.setNombreUsuario("MateoRobaina");
-        contactoMateo.setTelefono("+5491133088399");
+        contactoMateo.setNombre("Mateo");
+        contactoMateo.setApellido("Robaina");
+        //contactoMateo.setTelefono("+5491133088399");
         contactoMateo.setEmail("mateorobainaa@gmail.com");
 
         List<Notificacion> notificacionesMateo = new ArrayList<>();
@@ -25,39 +26,9 @@ public class Aplicacion {
 
         //contactoMateo.setNotificacion(notificacionesPreferidasLautaro);
         contactoMateo.setNotificacion(notificacionesMateo);
-        // Contacto de Carol
-       // Contacto contactoLucas = new Contacto();
-       // contactoCarol.setApellido("Navia");
-       // contactoCarol.setNombre("Carol");
-       // contactoCarol.setTelefono("+5491150966922");
-       // contactoCarol.setEmail("carolmdz2006@gmail.com");
-       //
-       // List<Notificacion> notificacionesPreferidasCarol = new ArrayList<>();
-       // notificacionesPreferidasCarol.add(new Whatsapp());
-       // notificacionesPreferidasCarol.add(new SMS());
-       //
-       // contactoCarol.setNotificacion(notificacionesPreferidasCarol);
 
-        // Encontramos a tu mascota! Enviar notificacion
-        contactoMateo.enviarNotificaciones(" Tu libro esta disponible!" + contactoMateo.getNombreUsuario());
+        contactoMateo.enviarNotificaciones(" El libro que reservaste esta disponible!" + " " + contactoMateo.getNombre() + " " + contactoMateo.getApellido());
     }
-  //  private static void ApiRest() {
-  //
-  //      // Probando el buscador de hogar de transito
-  //      BuscadorHogarTransito buscador = BuscadorHogarTransito.getInstancia();
-  //
-  //      List<HogarTransito> hogares = buscador.buscarHogarTransito(1);
-  //
-  //      System.out.println("Hogares!");
-  //      hogares.forEach(hogar -> {
-  //          System.out.println("{");
-  //          System.out.println("nombre: " + hogar.getNombre());
-  //          System.out.println("ubicacion");
-  //          System.out.println("direccion: " + hogar.getUbicacion().getDireccion());
-  //          System.out.println("lat: " + hogar.getUbicacion().getLatitud());
-  //          System.out.println("long: " + hogar.getUbicacion().getLongitud());
-  //          System.out.println("}");
-  //      });
-  //  }
+
 }
 

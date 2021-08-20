@@ -1,25 +1,27 @@
 import java.util.List;
 
 public class Usuario {
-    private String nombreUsuario;
+    private String nombre;
     private String email;
     private String telefono;
-    private String nombreCompleto;
+    private String apellido;
     private List<Notificacion> formasNotificacion;
 
     public void enviarNotificaciones(String mensaje) {
         EnviadorNotificaciones enviadorNotificaciones = EnviadorNotificaciones.getInstancia();
         enviadorNotificaciones.enviarNotificaciones(this.formasNotificacion, mensaje, this);
     }
+
     public void setNotificacion(List<Notificacion> formasNotificacion) {
         this.formasNotificacion = formasNotificacion;
     }
-    public String getNombreUsuario() {
-        return nombreUsuario;
+
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setNombreUsuario(String nombreUsuario) {
-        this.nombreUsuario = nombreUsuario;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public String getEmail() {
@@ -38,11 +40,11 @@ public class Usuario {
         this.telefono = telefono;
     }
 
-    public String getNombreCompleto() {
-        return nombreCompleto;
+    public String getApellido() {
+        return apellido;
     }
 
-    public void setNombreCompleto(String nombreCompleto) {
-        this.nombreCompleto = nombreCompleto;
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
     }
 }
