@@ -2,13 +2,22 @@
 
 public class Libro implements ILibro {
     private boolean estaAlquilado = false;
-    public boolean reservado;
-    public boolean hayStock;
-    public static String titulo;
-    public Integer id;
-    public Integer cantidadStock;
-    public Integer valor;
-    public Clase clase;
+    private boolean reservado;
+    private boolean hayStock;
+    private static String titulo;
+    private Integer id;
+    private Integer cantidadStock;
+    private Integer valor;
+    private Clase clase;
+    private Autor autor;
+
+    public Libro(boolean estaAlquilado, boolean reservado, boolean hayStock, Integer valor, Clase clase) {
+        this.estaAlquilado = estaAlquilado;
+        this.reservado = reservado;
+        this.hayStock = hayStock;
+        this.valor = valor;
+        this.clase = clase;
+    }
 
     public String getTitulo() {
         return titulo;

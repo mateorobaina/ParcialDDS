@@ -2,6 +2,11 @@ import java.util.List;
 //Aca se usa patron state
 public class Socio extends Usuario {
     private boolean tieneLibroAlquilado;
+    private Libro libroAlquilado;
+
+    public Libro getLibroAlquilado() {
+        return libroAlquilado;
+    }
 
     public boolean tieneLibroAlquilado() {
         return tieneLibroAlquilado;
@@ -14,7 +19,9 @@ public class Socio extends Usuario {
     public void alquilarLibro(Libro libro){
         if(!libro.isAlquilado() && ! tieneLibroAlquilado && libro.isHayStock()){
             this.tieneLibroAlquilado = true;
+            this.libroAlquilado = libro;
         }
 
     }
+
 }
