@@ -1,3 +1,3 @@
 public interface ILibro {
-    Integer calcularPrecio();
+    Integer precioTotal();
 }

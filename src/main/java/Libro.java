@@ -8,7 +8,7 @@ public class Libro implements ILibro {
     public Integer id;
     public Integer cantidadStock;
     public Integer valor;
-    public Integer impuesto;
+    public Clase clase;
 
     public String getTitulo() {
         return titulo;
@@ -61,7 +61,7 @@ public class Libro implements ILibro {
                 }
 
     @Override
-    public Integer calcularPrecio() {
-        return valor + impuesto;
+    public Integer precioTotal() {
+        return valor + clase.impuesto();
     }
 }
