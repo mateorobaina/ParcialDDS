@@ -1,19 +1,50 @@
-import java.util.List;
+
 
 public class Usuario {
     private String nombre;
     private String email;
+    private Integer id;
     private String telefono;
     private String apellido;
-    private List<Notificacion> formasNotificacion;
+    private Notificacion notificacion;
+    private Libro libroSolicitado;
 
-    public void enviarNotificaciones(String mensaje) {
+    public void enviarNotificacion(String mensaje) {
         EnviadorNotificaciones enviadorNotificaciones = EnviadorNotificaciones.getInstancia();
-        enviadorNotificaciones.enviarNotificaciones(this.formasNotificacion, mensaje, this);
+        enviadorNotificaciones.enviarNotificaciones(this.notificacion, mensaje, this);
     }
 
-    public void setNotificacion(List<Notificacion> formasNotificacion) {
-        this.formasNotificacion = formasNotificacion;
+    public void solicitarLibro(Libro libro){
+        if(libro.getCantidadStock() > 0){
+            libro.setCantidadStock(libro.getCantidadStock() - 1);
+        }
+        else{
+           libroSolicitado = libro;
+        }
+    }
+
+    public Libro getLibroSolicitado() {
+        return libroSolicitado;
+    }
+
+    public void setLibroSolicitado(Libro libroSolicitado) {
+        this.libroSolicitado = libroSolicitado;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Notificacion getNotificacion() {
+        return notificacion;
+    }
+
+    public void setNotificacion(Notificacion notificacion) {
+        this.notificacion = notificacion;
     }
 
     public String getNombre() {

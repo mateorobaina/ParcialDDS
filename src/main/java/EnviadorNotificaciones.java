@@ -1,5 +1,4 @@
 import com.twilio.Twilio;
-import java.util.List;
 
 public class EnviadorNotificaciones {
 
@@ -19,9 +18,7 @@ public class EnviadorNotificaciones {
         return instancia;
     }
 
-    public void enviarNotificaciones(List<Notificacion> notificaciones, String mensaje, Usuario usuario) {
-        notificaciones.forEach(notificacion -> {
+    public void enviarNotificaciones(Notificacion notificacion, String mensaje, Usuario usuario) {
             notificacion.enviar(mensaje, usuario);
-        });
     }
 }
