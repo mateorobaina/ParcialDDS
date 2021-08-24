@@ -3,11 +3,20 @@ import java.util.List;
 public class Autor {
     private String nombre;
     private String apellido;
+    private String id;
     private List<Libro> librosCreados;
 
     public Autor(String nombre, String apellido) {
         this.nombre = nombre;
         this.apellido = apellido;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public List<Libro> getLibrosCreados() {

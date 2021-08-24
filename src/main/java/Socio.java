@@ -1,6 +1,6 @@
-import java.util.List;
 //Aca se usa patron state
 public class Socio extends Usuario {
+    private String idSocio;
     private boolean tieneLibroAlquilado;
     private Libro libroAlquilado;
 
@@ -20,6 +20,7 @@ public class Socio extends Usuario {
         if(!libro.isAlquilado() && ! tieneLibroAlquilado && libro.isHayStock()){
             this.tieneLibroAlquilado = true;
             this.libroAlquilado = libro;
+            libro.setRentador(new Socio());
         }
 
     }

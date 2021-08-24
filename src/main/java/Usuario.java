@@ -3,7 +3,7 @@
 public class Usuario {
     private String nombre;
     private String email;
-    private Integer id;
+    private String id;
     private String telefono;
     private String apellido;
     private Notificacion notificacion;
@@ -31,11 +31,11 @@ public class Usuario {
         this.libroSolicitado = libroSolicitado;
     }
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 

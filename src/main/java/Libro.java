@@ -2,6 +2,7 @@
 
 public class Libro implements ILibro {
     private boolean estaAlquilado = false;
+    private Socio rentador;
     private boolean reservado;
     private boolean hayStock;
     private static String titulo;
@@ -10,6 +11,42 @@ public class Libro implements ILibro {
     private Integer valor;
     private Clase clase;
     private Autor autor;
+
+    public boolean isEstaAlquilado() {
+        return estaAlquilado;
+    }
+
+    public Socio getRentador() {
+        return rentador;
+    }
+
+    public void setRentador(Socio rentador) {
+        this.rentador = rentador;
+    }
+
+    public Integer getValor() {
+        return valor;
+    }
+
+    public void setValor(Integer valor) {
+        this.valor = valor;
+    }
+
+    public Clase getClase() {
+        return clase;
+    }
+
+    public void setClase(Clase clase) {
+        this.clase = clase;
+    }
+
+    public Autor getAutor() {
+        return autor;
+    }
+
+    public void setAutor(Autor autor) {
+        this.autor = autor;
+    }
 
     public Libro(boolean estaAlquilado, boolean reservado, boolean hayStock, Integer valor, Clase clase) {
         this.estaAlquilado = estaAlquilado;
